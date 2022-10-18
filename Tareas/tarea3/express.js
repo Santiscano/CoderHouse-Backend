@@ -1,5 +1,6 @@
 // 1 puerto 8080
 const express = require('express');
+const fs = require('fs')
 const http = require('http');
 const path = require('path');
 

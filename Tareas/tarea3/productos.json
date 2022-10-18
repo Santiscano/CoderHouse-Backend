@@ -1,4 +1,4 @@
-let products =[
+[
     {
         "title":"carne",
         "price": 12000,
