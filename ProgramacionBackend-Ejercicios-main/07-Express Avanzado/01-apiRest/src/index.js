@@ -25,6 +25,9 @@ const server = app.listen(puerto, () =>
 server.on('error', (err) => {
   console.log('ERROR ATAJADO', err);
 });
+// use permite recibir la data en json
+app.use(express.json());
+// permite mostrar la info recibida en form-urlcode
 
 /**
  * DEFINICION RUTAS BASICAS
@@ -86,12 +89,13 @@ app.get('/productos/:id', (req, res) => {
  *  - app.use(express.json()): para indicar que el body viene como JSON
  *  - app.use(express.urlencoded({ extended: true })) : Para decirle que puede venir info como no string
  */
-
-app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.post('/productos', (req, res) => {
   const body = req.body;
   console.log(body);
+
+  // esto mismo se puede escribir como desestructuracion y asi validarlo sin repetir body
+  // const {nombre, precio } = req.body
 
   /** Valido que la info que me mandaron este OK, sino respondo con 400 */
   if (
@@ -110,6 +114,7 @@ app.post('/productos', (req, res) => {
     nombre: body.nombre,
     precio: body.precio,
   };
+  
 
   productos.push(nuevoProducto);
 

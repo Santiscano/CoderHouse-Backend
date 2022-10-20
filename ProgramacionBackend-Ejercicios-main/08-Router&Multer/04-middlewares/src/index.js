@@ -15,6 +15,24 @@ server.on('error', (err) => {
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+
+        // ESTA ES UN EJEMPLO DE VALIDACION EN EL QUE SE USA COMO MIDDLEWARES UNA FUNCION QUE TIENE UNA LOGICA DENTRO
+        // el usuario deberia mandar un headers con su clave nombre=santiago
+app.use((req, res, next) =>{
+  const headers = req.headers;
+  console.log('middleware de app')
+  // if(headers.nombre !== 'santiago'){
+  //   return res.status(404).json({
+  //     msg: "no eres el desarrollador, solo el puede entrar"
+  //   })
+  // };
+  
+   // el no llamar a next hace que la app se pegue - no se cae, solo no continua la ruta asi que se pega
+  next();
+});
+// estos middleware tambien pueden ser a rutas, para asi tener rutas libres sin validacion y otras que si requieran validacion
+
+
 const funcion1 = (req, res, next) => {
   console.log('Entrando a funcion1');
   next();

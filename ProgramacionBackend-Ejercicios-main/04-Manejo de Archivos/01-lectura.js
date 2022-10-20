@@ -9,8 +9,7 @@ const pathArchivoOpcion1 = 'texto.txt';
 const pathArchivoOpcion2 = './texto.txt';               //El ./ indica que estas en el directorio actual
 const pathArchivoOpcion3 = `${__dirname}/texto.txt`;
 
-//Forma para referenciar un archivo que esta fuera del directorio donde estamos trabajando
-// /../ significa que subimos un nivel superior de donde estamos
+
 const pathArchivo4 = path.resolve(__dirname, './../03-Programacion sincronica y asincronica', 'texto.txt');
 
 

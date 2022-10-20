@@ -32,6 +32,12 @@ console.log(secondStaticFolder);
 app.use(express.static(secondStaticFolder));
 
 /**
+ * o en vez de esto anterior solo llamando el nombre de la carpeta es suficiente
+ * app.use(express.static('public'));
+ * app.use(express.static('staticFolder'));
+ */
+
+/**
  * DEFINICION DE LOS ROUTERS
  */
 

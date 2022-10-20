@@ -40,7 +40,7 @@ app.get('/api/palabras/:pos', (req, res) => {
     palabra: palabras[posicion - 1],
   });
 });
-
+// se ponen estas 2 configuaraciones adicionales para leer json y url-code
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

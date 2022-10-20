@@ -17,9 +17,14 @@ server.on('error', (err) => {
   console.log('Error en el servidor!! =>', err);
 });
 
-
+// request 'req' : toda laa info que el cliente envia
+// response 'res' : lo que nosotros enviaremos
 //Definimos las rutas de nuestra aplicacion. Si el usuario ejecuta alguna de estas rutas la funcion correspondiente se ejecutara.
 app.get('/', (req, res) => {
+  // se puede responder tanto con send como con json
+  // send se puede mandar lo que se quiere
+  // res.send({mensaje: "hola desde la ruta principal con send"})
+  // json solo mandar json
   res.json({
     mensaje: "Hola desde la ruta principal"
   })

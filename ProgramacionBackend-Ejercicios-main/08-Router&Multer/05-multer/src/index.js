@@ -15,7 +15,7 @@ const server = app.listen(puerto, () =>
 
 /**Upload.single se usa para subir 1 solo archivo */
 /**Recibe como parametro el nombre del param de la request */
-app.post('/single', upload.single('imagen'), (req, res) => {
+app.post('/single', upload.single('imagen'), (req, res) => { //la palabra imagen debe ser igual a la key del body del cliente
   try {
     console.log(req.file);
     res.send(req.file);
@@ -23,6 +23,7 @@ app.post('/single', upload.single('imagen'), (req, res) => {
     res.send(400);
   }
 });
+// si instalo dependencias y corro npm run dev crea la carpeta uploads definida
 
 /**
  * Opcion2
@@ -41,9 +42,10 @@ const storage = multer.diskStorage({
       console.log(`Carpeta ${folderName} no existe. la creamos`);
       fs.mkdirSync(folderName);
     }
-
     cb(null, folderName);
   },
+
+
   filename: function (req, file, cb) {
     cb(null, `${Date.now()}-${file.originalname}`);
   },
