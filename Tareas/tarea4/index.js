@@ -1,4 +1,4 @@
-const server = require('./services/server');
+const server = require('./server/services');
 
 const puerto = 8080;
 

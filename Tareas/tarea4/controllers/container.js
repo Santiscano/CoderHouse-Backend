@@ -31,11 +31,6 @@ class Contenedor {
     async exists(id) {
 		const data = await this.getAll()
 		const indice = data.findIndex(product => product.id == id)
-		// if(indice < 0){
-		// 	return false;
-		// } else {
-		// 	return true;
-		// }
 		return indice >= 0;
 	}
 
@@ -113,12 +108,12 @@ class Contenedor {
 	async deleteAll() {
 		await this.writeProducts([])
 	}
+}
 
-    const productsApi = new Contenedor( filePath );
+const productsApi = new Contenedor( filepath );
 
-    module.exports = {
-	    ProductsController: productsApi
-
+module.exports = {
+	ProductsController: productsApi
 }
 
 

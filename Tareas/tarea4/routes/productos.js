@@ -24,7 +24,7 @@ routerProducts.get('/:id', async (req, res, next)=>{
 routerProducts.post('/', async (req, res, next)=>{
     try{
         const data = req.body
-        const response = await profuctsController.save(date)
+        const response = await productsController.save(date)
         res.json({
             msg: `nuevo producto guardado Id: ${response}`
         });
