@@ -1,0 +1,33 @@
+[
+    {
+        "id":"1",
+        "title":"moto",
+        "category":"vehiculo",
+        "price":"$3.000",
+        "discount":"$500"
+    },{
+        "id":"2",
+        "title":"carro",
+        "category":"vehiculo",
+        "price":"$12.000",
+        "discount":"$1.100"
+    },{
+        "id":"3",
+        "title":"pc",
+        "category":"computo",
+        "price":"$1.000",
+        "discount":"$200"
+    },{
+        "id":"4",
+        "title":"mouse",
+        "category":"computo",
+        "price":"$30",
+        "discount":"$5"
+    },{
+        "id":"5",
+        "title":"celular",
+        "category":"tecno-movil",
+        "price":"$300",
+        "discount":"$60"
+    }
+]
