@@ -9,10 +9,10 @@ try {
   console.log('Error Borrado Sincronica', err);
 }
 
-// //Escritura Asincronica
+//Escritura Asincronica
 
-// fs.unlink(pathArchivoBorrar, (err, salida) => {
-//   if (err) console.log('Error Borrado Asincronica', err);
+fs.unlink(pathArchivoBorrar, (err, salida) => {
+  if (err) console.log('Error Borrado Asincronica', err);
 
-//   console.log('DONE');
-// });
+  console.log('DONE');
+});

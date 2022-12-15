@@ -23,8 +23,9 @@ app.use(express.urlencoded({ extended: true }));
  */
 const publicPath = path.resolve(__dirname, '../public');
 console.log(publicPath);
-app.use(express.static(publicPath));
-
+// app.use(express.static(publicPath)); //esta es la forma con el path
+// pero se puede llamar directamente la carpeta
+app.use(express.static('public'));
 /**Podemos poner mas de un path statico para express */
 
 const secondStaticFolder = path.resolve(__dirname, '../staticFolder');

@@ -1,3 +1,4 @@
+// en vez de http llamo a express
 const express = require('express');
 const path = require('path')
 
@@ -8,7 +9,7 @@ const app = express();
 //La salida de la funcion listen va a ser nuestro servidor HTTP
 const puerto = 8080;
 const server = app.listen(puerto, () =>
-  console.log('Server Up en puerto', puerto)
+  console.log('Server Up en puerto:', puerto)
 );
 
 //Para indicar una situación de error en la puesta en marcha del servidor, 

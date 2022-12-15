@@ -41,7 +41,7 @@ app.get('/usuarios/:id', async (req, res)=>{
   const fileData = await fs.readFile(filePath, 'utf8');
   const usuarios = JSON.parse(fileData);
 
-  const indice = usuario.findIndex( unUsuario => unUsuario.id == id );
+  const indice = usuarios.findIndex( unUsuario => unUsuario.id == id );
 
   if(indice < 0 ){
     return res.status(404)

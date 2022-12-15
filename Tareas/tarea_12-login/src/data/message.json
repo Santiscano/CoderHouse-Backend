@@ -1,0 +1,55 @@
+[
+	{
+		"author": {
+			"id": "santiscano@gmail.com",
+			"nombre": "santiago",
+			"apellido": "sierra",
+			"edad": "1992-06-17T20:14:00.820Z",
+			"alias": "santiscano"
+		},
+		"text": "ad laborum magnam omnis fugiat voluptates accusamus rerum dolorum totam"
+	},
+	{
+		"author": {
+			"id": "stefacs@hotmail.com",
+			"nombre": "Stefany",
+			"apellido": "Castaño",
+			"edad": "2000-05-06T12:17:34.843Z",
+			"alias": "stefy"
+		},
+		"text": "ex odit atque libero maiores quis dignissimos hic officia cupiditate"
+	},
+	{
+		"author": {
+			"id": "risotada@hotmail.com",
+			"nombre": "Maria",
+			"apellido": "Cano",
+			"edad": "1985-08-13T00:07:18.730Z",
+			"alias": "Francisca",
+			"avatar": "https://loremflickr.com/1234/2345/abstract"
+		},
+		"text": "vero exercitationem ipsa pariatur nulla quibusdam repudiandae autem expedita ullam"
+	},
+	{
+		"author": {
+			"id": "Adn72@yahoo.com",
+			"nombre": "Andrea",
+			"apellido": "Vergara",
+			"edad": "1999-04-26T03:39:38.909Z",
+			"alias": "Gabriela",
+			"avatar": "https://loremflickr.com/1234/2345/abstract"
+		},
+		"text": "dolores fugiat reprehenderit eaque necessitatibus eaque molestias blanditiis quis nihil"
+	},
+	{
+		"author": {
+			"id": "Joaqun_Ceja@yahoo.com",
+			"nombre": "Homero",
+			"apellido": "Rivera",
+			"edad": "1986-08-17T06:03:42.430Z",
+			"alias": "Marco Antonio",
+			"avatar": "https://loremflickr.com/1234/2345/abstract"
+		},
+		"text": "animi impedit ratione ducimus reprehenderit vitae ad earum facilis libero"
+	}
+]

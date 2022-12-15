@@ -2,6 +2,7 @@
 const {Router} = require('express');
 // UsuariosRouter es la logica traida
 const UsuariosRouter = require('./usuarios');
+
 // y aqui ponemos esa funcion en una variable
 const rutaPrincipal = Router();
 

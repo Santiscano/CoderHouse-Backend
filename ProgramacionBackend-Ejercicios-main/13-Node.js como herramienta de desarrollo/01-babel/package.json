@@ -6,6 +6,7 @@
   "scripts": {
     "build": "babel src --out-dir dist",
     "start": "node ./dist/index.js",
+    "start-opcion-2":"npm run build && node dist/index",
     "dev": "nodemon --exec babel-node ./src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,3 +21,4 @@
     "nodemon": "^2.0.15"
   }
 }
+

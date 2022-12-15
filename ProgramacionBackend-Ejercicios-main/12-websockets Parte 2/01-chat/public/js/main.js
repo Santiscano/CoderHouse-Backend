@@ -1,8 +1,8 @@
-const chatForm = document.getElementById('chat-form');
-const chatMessages = document.querySelector('.chat-messages');
-const msg = document.getElementById('msg');
-const roomName = document.getElementById('room-name');
-const usersList = document.getElementById('users');
+const chatForm = document.getElementById("chat-form");
+const chatMessages = document.querySelector(".chat-messages");
+const msg = document.getElementById("msg");
+const roomName = document.getElementById("room-name");
+const usersList = document.getElementById("users");
 //GET Username & Room from url using qs CDN (https://cdnjs.com/libraries/qs)
 const qsData = Qs.parse(location.search, {
   ignoreQueryPrefix: true,
@@ -14,9 +14,9 @@ console.log(qsData);
 
 const socket = io();
 //Join to the room
-socket.emit('JoinRoom', qsData);
+socket.emit("JoinRoom", qsData);
 
-socket.on('message', (data) => {
+socket.on("message", (data) => {
   //add the message to the chat Window
   outputMessage(data);
   //Automatically scroll down to the last message
@@ -24,14 +24,14 @@ socket.on('message', (data) => {
 });
 
 //Message submit
-chatForm.addEventListener('submit', (e) => {
+chatForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
   //Emit Message to the server
-  socket.emit('chatMessage', msg.value);
+  socket.emit("chatMessage", msg.value);
 
   //Clear submitted message
-  msg.value = '';
+  msg.value = "";
 });
 
 //Output Message to DOM
@@ -46,8 +46,8 @@ chatForm.addEventListener('submit', (e) => {
  *       </div>
  */
 function outputMessage(message) {
-  const div = document.createElement('div');
-  div.classList.add('message');
+  const div = document.createElement("div");
+  div.classList.add("message");
   div.innerHTML = `
   <p class="meta">${message.username} <span> ${message.time}</span></p>
   <p class="text"> ${message.text} </p>`;
@@ -56,7 +56,7 @@ function outputMessage(message) {
 }
 
 //Get Room's Info
-socket.on('roomUsers', (roomInfo) => {
+socket.on("roomUsers", (roomInfo) => {
   const { room, users } = roomInfo;
 
   outputRoomName(room);
@@ -71,5 +71,5 @@ function outputRoomName(room) {
 function outputUsers(users) {
   const arrayofUsers = users.map((aUser) => `<li>${aUser.username}</li>`);
   console.log(arrayofUsers);
-  usersList.innerHTML = arrayofUsers.join('');
+  usersList.innerHTML = arrayofUsers.join("");
 }

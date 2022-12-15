@@ -17,7 +17,7 @@ let productos = [
 
 /** INICIALIZACION API con EXPRESS */
 const app = express();
-const puerto = 8080;
+// const puerto = 8080;
 const server = app.listen(puerto, () =>
   console.log('Server up en puerto', puerto)
 );
@@ -44,7 +44,7 @@ app.get('/productos', (req, res) => {
   const filtroPrecio = req.query.price;
   let data;
 
-  console.log(filtroPrecio);
+  console.log(filtroPrecio, 'filtro precios');
 
   if (filtroPrecio)
     data = productos.filter(

@@ -1,5 +1,6 @@
 const http = require('http');
 
+// 1- creo una condicion para saludar
 const obtenerMensaje = () => {
   // fyh resumen palabra fecha y hora
   const fyh = new Date();
@@ -14,7 +15,7 @@ const obtenerMensaje = () => {
 
   return msg;
 };
-// creo servidor
+// 2-creo servidor
 const server = http.createServer((request, response) => {
   // defino mensaje
   const mensaje = obtenerMensaje();
@@ -22,7 +23,7 @@ const server = http.createServer((request, response) => {
   response.end(mensaje);
 });
 
-// puesto donde respondera
+// 3- creo puerto donde respondera
 const puerto = 8080;
 // pongo a escuchar al puerto 8080
 server.listen(puerto, () => {

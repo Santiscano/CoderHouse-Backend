@@ -31,16 +31,15 @@ try {
   })
 
   // ahora con promesa
-  fs.promises
-  .writeFile(rutaArchivo, fecha)
+  fs.promises.writeFile(rutaArchivo, fecha)
   .then(() => {
     console.log('escribi')
     return fs.promises.readFile(rutaArchivo,'utf-8');
   })
   .then(data => console.log('lei',data))
-  .catch(err =>{
-    console.log('error promesa', err);
-  })
+  .catch(err =>{console.log('error promesa', err);}
+  )
+  
 //convirtiendo async
 const miFuncionAsync = async () => {
   try{
